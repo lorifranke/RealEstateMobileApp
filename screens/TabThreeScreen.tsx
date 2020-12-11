@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, View, BackHandler, Image, Text, TouchableOpacity, Dimensions, ScrollView, Button } from 'react-native';
+import { StyleSheet, View, BackHandler, Image, Text, TouchableOpacity, Dimensions, ScrollView, Button, SafeAreaView } from 'react-native';
 import MapView, { Marker, Callout, CalloutSubview } from 'react-native-maps';
 import Icons from 'react-native-vector-icons/MaterialIcons';
 import { Icon } from 'react-native-elements';
@@ -132,6 +132,17 @@ render() {
   },
 ];
 
+
+const data3 = {
+  labels: ["Unit1", "Unit2"],
+  legend: ["MortgageLTV", "MortgageLTPP", "AverageRent"],
+  data: [
+    [180, 600, 360],
+    [500, 200, 636]
+  ],
+  barColors: ["#dfe4ea", "#ced6e0", "#a4b0be"]
+};
+
     return (
         <View style={styles.container}>
             <MapView
@@ -151,6 +162,7 @@ render() {
                 searchIcon = {null}
                 inputStyle = {styles.searchText}
                 cancelButtonTitle
+                clearIcon = {null}
                 rightIconContainerStyle = {styles.searchRightIcon}
               />
                 {
@@ -173,6 +185,7 @@ render() {
                 this.getResults().length > 0 && this.state.detailsOpened &&
                 <View style={{...styles.bubble, ...{height: (this.state.ValueHolder === true ? 225 : (325 + Dimensions.get('window').height))}}}>
                     <ScrollView style={styles.scroll}>
+                    <View style={styles.container2}>
                     <View style ={styles.toprow}>
                     <Image
                         source ={require('../assets/images/icon.png')}
@@ -198,12 +211,20 @@ render() {
                     />
                     <Text style={styles.title2}>One Time Investment Costs</Text>
                     <PieChart
-                    data={data2}
+                      data={data2}
                       width={screenWidth}
                       height={200}
                       chartConfig={chartConfig}
                       accessor={"portion"}
                     />
+                    <Text style={styles.title2}>Mortgage Analysis</Text>
+                    <StackedBarChart style={styles.barchart}
+                      data={data3}
+                      width={0.9 * screenWidth}
+                      height={200}
+                      chartConfig={chartConfig}
+                    />
+                    </View>
                     </ScrollView>
                 </View>
              }
@@ -219,6 +240,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
+  container2: {
+  },
   title: {
     fontSize: 19,
     fontWeight: 'bold',
@@ -226,6 +249,7 @@ const styles = StyleSheet.create({
     title2: {
     paddingTop: 10,
     fontSize: 15,
+    paddingBottom: 5,
     fontWeight: 'bold',
   },
   separator: {
@@ -254,6 +278,9 @@ const styles = StyleSheet.create({
   image: {
     width: 30,
     height: 30,
+  },
+  barchart: {
+   marginBottom: 600
   },
   name: {
     fontSize: 16,
