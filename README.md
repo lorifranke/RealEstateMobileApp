@@ -4,13 +4,13 @@
 
 * To run a mobile application you will need to install ```npm install -g expo-cli``` for React-Native as well as a mobile phone emulator (unless you run the code as web application). For iOS please use XCode with belonging phone simulator to run the app on a virtual phone. Another possibility is to connect your phone with USB and run the app on your phone.
 
-* To start the project, you will need to run ```expo init YourProjectName``` to initialize an expo project. Then, you can start the application with ```npm start``` and th browser will open the metro bundler where you are able to access different simulators.
+* To inititalize an expo project, you will need to run ```expo init YourProjectName``` in the command line. This will link an expo project to the folder. Then, you can start the application with ```npm start``` and th browser will open the metro bundler where you are able to access different simulators.
 
 * A further detailed documentation on how to use and install React Native can be found here: https://reactnative.dev/docs/environment-setup and an introduction how to set up a first mobile app here: 
 
 # Source code
 
-* screens: This is probably the most important folder as it contains all main screens/pages of the application. It contains different files, each belonging to one screen. The three screens we have in the app right now are: tabone, tabtwo, tabthree, which are all linked in the navigation bar on the bottom of the UI. If we want to build additional pages that should be displayed in the app, these files belong here. In case we have some errors or problem when displaying the app, there is NotFoundScreen for error handling.
+* screens: This is probably the most important folder of the UI! It contains all main screens/pages of the application. It contains different files, each belonging to one screen. The three screens we have in the app right now are: tabone, tabtwo, tabthree, which are all linked in the navigation bar on the bottom of the UI. If we want to build additional pages that should be displayed in the app, these files belong here. In case we have some errors or problem when displaying the app, there is NotFoundScreen for error handling.
 
 * assets folder: Here we save all images and icons that we need, such as fonts to make a nice design.
 
