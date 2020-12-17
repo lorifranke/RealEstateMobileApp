@@ -1,8 +1,12 @@
 # Installation instructions
 
-* This Real Estate App can be installed with Node.js usinf the node package manager. Download this folder and run ```npm install``` in the command line. This will install the packages listed in the package.json file.
+* This Real Estate App can be installed with Node.js using the node package manager. Download this folder and run ```npm install``` in the command line to get all packages. This will install the packages listed in the package.json file. Alternatively you can also use ```yarn``` to install packages.
 
-* To run a mobile application you will need to install expo for react native as well as a mobile phone emulator (unless you run the code as web application). For iOS please use XCode with belonging phone simulator to run the app on a virtual phone. Another possibility is to connect your phone with USB and run the app on your phone.
+* To run a mobile application you will need to install ```npm install -g expo-cli``` for React-Native as well as a mobile phone emulator (unless you run the code as web application). For iOS please use XCode with belonging phone simulator to run the app on a virtual phone. Another possibility is to connect your phone with USB and run the app on your phone.
+
+* To start the project, you will need to run ```expo init YourProjectName``` to initialize an expo project. Then, you can start the application with ```npm start``` and th browser will open the metro bundler where you are able to access different simulators.
+
+* A further detailed documentation on how to use and install React Native can be found here: https://reactnative.dev/docs/environment-setup and an introduction how to set up a first mobile app here: 
 
 # Source code
 
@@ -24,4 +28,4 @@
 
 # More information
 
-This application is the User Interface (UI) part of a full software project. The backend belonging to this application can be found here: https://github.com/MounikaChava304/CS682
+This application is the User Interface (UI) part of a full software project. The backend belonging to this real estate mobile UI can be found here: https://github.com/MounikaChava304/CS682
