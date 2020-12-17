@@ -1,4 +1,4 @@
-# Installation instructions:
+# Installation instructions
 
 * This Real Estate App can be installed with Node.js usinf the node package manager. Download this folder and run ```npm install``` in the command line. This will install the packages listed in the package.json file.
 
@@ -19,6 +19,8 @@
 * node-modules: packages necessary for running the app
 
 * propoerty.json: This file is created by the backend part of this project and is picked up by this UI. As soon as the backend is able to save multiple properties in a database, the UI can render this provided information from the property.json files.
+
+* package.json, package-lock.json and yarn.lock are files that are necessary for installing and using the packages required for the app.
 
 # More information
 
