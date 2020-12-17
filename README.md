@@ -8,7 +8,7 @@
 
 * A further detailed documentation on how to use and install React Native can be found here: https://reactnative.dev/docs/environment-setup and an introduction how to set up a first mobile app here: 
 
-# Source code
+# Source code and folder structure
 
 * screens: This is probably the most important folder of the UI! It contains all main screens/pages of the application. It contains different files, each belonging to one screen. The three screens we have in the app right now are: tabone, tabtwo, tabthree, which are all linked in the navigation bar on the bottom of the UI. If we want to build additional pages that should be displayed in the app, these files belong here. In case we have some errors or problem when displaying the app, there is NotFoundScreen for error handling.
 
@@ -22,7 +22,7 @@
 
 * node-modules: packages necessary for running the app
 
-* propoerty.json: This file is created by the backend part of this project and is picked up by this UI. As soon as the backend is able to save multiple properties in a database, the UI can render this provided information from the property.json files.
+* property.json: This file is created by the backend part of this project and is picked up by this UI. As soon as the backend is able to save multiple properties in a database, the UI can render this provided information from the property.json files. Depending on which information we have available from fetching data from the API connected to the backend, the UI will show the received information.
 
 * package.json, package-lock.json and yarn.lock are files that are necessary for installing and using the packages required for the app.
 
