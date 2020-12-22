@@ -11,8 +11,9 @@
 * More resources on debugging the app while using React-native can be found here: https://reactnative.dev/docs/troubleshooting
 
 
-# Please find the full **Code Documentation** here:
+# **Code Documentation**:
 
+https://github.com/lorifranke/RealEstateMobileApp/blob/master/Code_Documentation.pdf
 
 
 # **User Manual** with UI Screenshots: 
