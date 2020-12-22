@@ -7,6 +7,7 @@ export default function useCachedResources() {
   const [isLoadingComplete, setLoadingComplete] = React.useState(false);
 
   // Load any resources or data that we need prior to rendering the app
+  // important because JavaScript is asynchronous
   React.useEffect(() => {
     async function loadResourcesAndDataAsync() {
       try {

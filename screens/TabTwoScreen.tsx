@@ -95,7 +95,7 @@ export default class TabTwoScreen extends React.Component {
           />
           <ListItem
             title="Your Preferred Location"
-            rightTitle="New York"
+            rightTitle="San Francisco"
             rightTitleStyle={{ fontSize: 15 }}
             onPress={() => this.onPressSetting()}
             containerStyle={styles.listItemContainer}

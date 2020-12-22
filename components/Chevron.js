@@ -2,6 +2,7 @@ import React from 'react'
 import { Icon } from 'react-native-elements'
 import { Colors } from '../constants'
 
+// create a chevron that is used in the settings screen
 const Chevron = () => (
   <Icon
     name="chevron-right"

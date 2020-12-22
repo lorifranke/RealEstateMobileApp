@@ -1,3 +1,4 @@
+// create colors for themed design
 const tintColorLight = '#2f95dc';
 const tintColorDark = '#fff';
 

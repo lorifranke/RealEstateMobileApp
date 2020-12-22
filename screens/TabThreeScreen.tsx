@@ -1,12 +1,19 @@
 import * as React from 'react';
 import { StyleSheet, View, BackHandler, Image, Text, TouchableOpacity, Dimensions, ScrollView, Button, SafeAreaView } from 'react-native';
 import MapView, { Marker, Callout, CalloutSubview } from 'react-native-maps';
+
+// different icons used:
 import Icons from 'react-native-vector-icons/MaterialIcons';
 import { Icon } from 'react-native-elements';
+
+// additional components loaded (for map search and charts)
 import { SearchBar } from "react-native-elements";
 import { LineChart, BarChart, PieChart, StackedBarChart } from "react-native-chart-kit";
 
+// screenWidth is used to get the full phone screen
 const screenWidth = Dimensions.get("window").width;
+
+// this values are necessary to style the chart of the properties
 const chartConfig = {
   backgroundGradientFrom: "white",
   backgroundGradientFromOpacity: 0,
@@ -17,6 +24,7 @@ const chartConfig = {
   strokeWidth: 2, // optional, default 3
 };
 
+// create our Map screen:
 export default class TabThreeScreen extends React.Component {
 
 state = {
@@ -25,13 +33,15 @@ state = {
     ValueHolder : true,
 }
 
+// update search necessary to update results during typing in searchbar
 updateSearch = (search) => {
     this.setState({
         searchTerm: search === "" ? null: search,
         detailsOpened: false
     });
 };
-  
+
+// if the user clicks on the property marker, the state of the variable changes between opened or closed property details
 markerClick() {
     console.log("Marker was clicked");
     this.setState({detailsOpened: !this.state.detailsOpened});
@@ -41,6 +51,8 @@ SetStateValueFunction() {
     this.setState({ValueHolder: !this.state.ValueHolder});
 };
 
+// typing in the searchbar will check the addresses of property.json files
+// and show the property on the map if there's a match
 getResults() {
     const property = require('../property.json');
     const term = this.state.searchTerm;
@@ -53,7 +65,8 @@ getResults() {
 }
 
 render() {
-    // load property.json
+    // load property.json, as soon as the backend has a database with many property.json files,
+    // we can call them here
     const fileName = require( '../property.json');
 
     // use values for marker
@@ -69,7 +82,7 @@ render() {
           strokeWidth: 2 // optional
         }
     ],
-      legend: ["Return on Investment per Year"] // optional
+      legend: [fileName.TotalROIAfterOneYear] // optional, we can also chose any other value from the property to show
     };
 
     // Data for the pie chart from property.json

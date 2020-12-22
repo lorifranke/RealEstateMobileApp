@@ -4,8 +4,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import {useState, useRef} from 'react';
 
+// import our predefined colors and schemes for nice design:
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
+
+//importing different components that needs to be added to our the bottom navigation bar
 import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import TabThreeScreen from '../screens/TabThreeScreen';
@@ -14,8 +17,11 @@ import { BottomTabParamList, TabOneParamList, TabTwoParamList, TabThreeParamList
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
 export default function BottomTabNavigator() {
+
     const colorScheme = useColorScheme();
     const [token, setToken] = useState(null);
+
+    // render tags of bottom navigator:
     return (
         <BottomTab.Navigator
             initialRouteName="TabOne"
@@ -68,12 +74,13 @@ export default function BottomTabNavigator() {
   );
 }
 
-// You can explore the built-in icon families and icons on the web at:
-// https://icons.expo.fyi/
+// More built-in icon families and icons can be found at: https://icons.expo.fyi/
+// the icons ar erendered in the bottom bar and use the props
 function TabBarIcon(props: { name: string; color: string }) {
   return <Ionicons size={30} style={{ marginBottom: -3 }} {...props} />;
 }
 
+// We use react-navigation/stack:
 // Each tab has its own navigation stack, you can read more about this pattern here:
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
 const TabOneStack = createStackNavigator<TabOneParamList>();

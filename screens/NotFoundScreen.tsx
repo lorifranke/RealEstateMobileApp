@@ -1,9 +1,10 @@
 import { StackScreenProps } from '@react-navigation/stack';
 import * as React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-
 import { RootStackParamList } from '../types';
 
+
+// default fallback screen if a screen is called that does not exist
 export default function NotFoundScreen({
   navigation,
 }: StackScreenProps<RootStackParamList, 'NotFound'>) {
@@ -17,6 +18,7 @@ export default function NotFoundScreen({
   );
 }
 
+// Style sheet for the not found screen:
 const styles = StyleSheet.create({
   container: {
     flex: 1,
