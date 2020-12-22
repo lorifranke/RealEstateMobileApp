@@ -72,19 +72,6 @@ render() {
     // use values for marker
     const { search } = this.state;
 
-    // Data for the line chart
-    const data = {
-      labels: ["2020", "2021", "2022", "2023", "2024", "2025"],
-      datasets: [
-        {
-          data: [20, 45, 28, 80, 99, 43],
-          color: (opacity = 1) => `rgba(134, 65, 244, ${opacity})`, // optional
-          strokeWidth: 2 // optional
-        }
-    ],
-      legend: [fileName.TotalROIAfterOneYear] // optional, we can also chose any other value from the property to show
-    };
-
     // Data for the pie chart from property.json
     const data2 = [
   {
@@ -144,6 +131,19 @@ render() {
     legendFontSize: 12
   },
 ];
+
+    // Data for the line chart
+    const data = {
+      labels: ["2020", "2021", "2022", "2023", "2024", "2025"],
+      datasets: [
+        {
+          data: [20, 45, 28, 80, 99, 43],
+          color: (opacity = 1) => `rgba(134, 65, 244, ${opacity})`, // optional
+          strokeWidth: 2 // optional
+        }
+    ],
+      legend: [fileName.TotalROIAfterOneYear] // optional, we can also chose any other value from the property to show
+    };
 
 
 const data3 = {
