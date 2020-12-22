@@ -1,4 +1,4 @@
-# Installation instructions & Setup
+# Installation Instructions & Setup
 
 * This Real Estate App can be installed with Node.js using the node package manager. Download this folder and run ```npm install``` in the command line to get all packages. This will install the packages listed in the package.json file. Alternatively you can also use ```yarn``` to install packages.
 
@@ -13,25 +13,11 @@
 
 # Please find the full **Code Documentation** here:
 
-# Here is the **User Manual** with UI Screenshots: https://github.com/lorifranke/RealEstateMobileApp/blob/master/User_Manual.pdf
 
-# Source code and folder structure
 
-* screens: This is probably the most important folder of the UI! It contains all main screens/pages of the application. It contains different files, each belonging to one screen. The three screens we have in the app right now are: tabone, tabtwo, tabthree, which are all linked in the navigation bar on the bottom of the UI. If we want to build additional pages that should be displayed in the app, these files belong here. In case we have some errors or problem when displaying the app, there is NotFoundScreen for error handling.
+# **User Manual** with UI Screenshots: 
 
-* assets folder: Here we save all images and icons that we need, such as fonts to make a nice design.
-
-* components folder: contains helper files that create little components of the app.
-
-* constants: Here are files containing configurations for the color schemes and the layout of the app
-
-* navigation: This folder contains all files that are necessary for the navigation in the mobile app, for example we have a bottom nav bar that navigates through the app. All the screens (pages) we create must be linked in the navigation to be visible and usable.
-
-* node-modules: packages necessary for running the app
-
-* property.json: This file is created by the backend part of this project and is picked up by this UI. As soon as the backend is able to save multiple properties in a database, the UI can render this provided information from the property.json files. Depending on which information we have available from fetching data from the API connected to the backend, the UI will show the received information.
-
-* package.json, package-lock.json and yarn.lock are files that are necessary for installing and using the packages required for the app.
+https://github.com/lorifranke/RealEstateMobileApp/blob/master/User_Manual.pdf
 
 # More information
 
